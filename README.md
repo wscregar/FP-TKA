@@ -45,4 +45,8 @@ Untuk droplet application:
 - Akses web menggunakan IP yang terbuat didroplets
 
 ## Hasil dari Implementasi
+![Gambar WhatsApp 2024-06-21 pukul 21 09 58_8925ba1f](https://github.com/wscregar/FP-TKA/assets/145766477/542cc8d5-8281-4f49-a8b1-bb29a5861bab)
 
+![Gambar WhatsApp 2024-06-21 pukul 21 08 14_b9d86110](https://github.com/wscregar/FP-TKA/assets/145766477/f6e5f60c-aa77-4a8b-9834-6bdc9b0a5f60)
+
+![Gambar WhatsApp 2024-06-21 pukul 21 08 44_ee4f62ab](https://github.com/wscregar/FP-TKA/assets/145766477/270c4c8e-d84f-4e78-94e6-4e6ba737e123)
