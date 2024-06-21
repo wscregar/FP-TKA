@@ -17,5 +17,29 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 ## Implementasi Arsitektur Cloud
 
+Worker1
+
+Backend
+
+Database
+
+
+# Langkah-langkah awal
+
+Membuat 2 Droplets, 1 untuk application dan 1 untuk Back-end di Digital Ocean
+
+Membuat Load-Balancer dan disambungkan ke 1 application Droplets
+
+Terakhir, membuat Database MongoDB
+
+Konfigurasi
+
+Untuk droplet application:
+
+`sudo apt-get install apache2`
+masukkan `index.html` beserta `styles.css` di Resources yang diberikan
+Gunakan command `systemctl restart apache2` untuk restart service apache2
+Akses web menggunakan IP yang terbuat didroplets
+
 ## Hasil dari Implementasi
 
