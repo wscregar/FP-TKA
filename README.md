@@ -24,7 +24,7 @@ Backend
 Database
 
 
-# Langkah-langkah awal
+## Langkah-langkah awal
 
 Membuat 2 Droplets, 1 untuk application dan 1 untuk Back-end di Digital Ocean
 
@@ -32,7 +32,7 @@ Membuat Load-Balancer dan disambungkan ke 1 application Droplets
 
 Terakhir, membuat Database MongoDB
 
-Konfigurasi
+### Konfigurasi
 
 Untuk droplet application:
 
