@@ -36,13 +36,13 @@ Terakhir, membuat Database MongoDB
 
 Untuk droplet application:
 
-`sudo apt-get install apache2`
+- `sudo apt-get install apache2`
 
-masukkan `index.html` beserta `styles.css` di Resources yang diberikan
+- masukkan `index.html` beserta `styles.css` di Resources yang diberikan
 
-Gunakan command `systemctl restart apache2` untuk restart service apache2
+- Gunakan command `systemctl restart apache2` untuk restart service apache2
 
-Akses web menggunakan IP yang terbuat didroplets
+- Akses web menggunakan IP yang terbuat didroplets
 
 ## Hasil dari Implementasi
 
