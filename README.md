@@ -17,3 +17,5 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 ## Implementasi Arsitektur Cloud
 
+## Hasil dari Implementasi
+
