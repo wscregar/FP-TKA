@@ -11,18 +11,23 @@ Pada suatu saat anda mendapatkan project untuk mendeploy sebuah aplikasi Sentime
 Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut. Apabila dana maksimal yang diberikan adalah 1 juta rupiah per bulan (65 US$) konfigurasi cloud terbaik seperti apa yang bisa dibuat.
 
 ## Rancangan Arsitektur dan Estimasi Harga
-![image](https://github.com/wscregar/FP-TKA/assets/145766477/1efb985c-ea3d-4e38-87ff-d2d250551298)
+* Arsitektur
 
-![image](https://github.com/wscregar/FP-TKA/assets/145766477/3370b9bc-a204-4110-a560-f80ef6b05ba3)
+![image](https://github.com/wscregar/FP-TKA/assets/145766477/4dbf9be3-4ae5-42fd-833a-73cf65a73e76)
+
+* Estimasi Harga
+
+![image](https://github.com/wscregar/FP-TKA/assets/145766477/d7d92f0c-474d-49db-adfd-5188bb7eec4a)
+
 
 ## Implementasi Arsitektur Cloud
 
-Worker1
+A. Setup
+* Load Balancer
 
-Backend
+* Worker 1
 
-Database
-
+* Worker 2
 
 ## Langkah-langkah awal
 
@@ -44,9 +49,12 @@ Untuk droplet application:
 
 - Akses web menggunakan IP yang terbuat didroplets
 
-## Hasil dari Implementasi
+# Hasil dari Implementasi
+### Hasil Endpoin API 
+
 ![Gambar WhatsApp 2024-06-21 pukul 21 09 58_8925ba1f](https://github.com/wscregar/FP-TKA/assets/145766477/542cc8d5-8281-4f49-a8b1-bb29a5861bab)
 
+### Hasil Locust 
 ![Gambar WhatsApp 2024-06-21 pukul 21 08 14_b9d86110](https://github.com/wscregar/FP-TKA/assets/145766477/f6e5f60c-aa77-4a8b-9834-6bdc9b0a5f60)
 
 ![Gambar WhatsApp 2024-06-21 pukul 21 08 44_ee4f62ab](https://github.com/wscregar/FP-TKA/assets/145766477/270c4c8e-d84f-4e78-94e6-4e6ba737e123)
