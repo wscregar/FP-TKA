@@ -217,3 +217,7 @@ sudo systemctl start mongod
 # Kesimpulan 
 
 Dari hasil pengerjaan kami diatas dapat disimpulkan semua pengujian yang telah kami uji coba dengan spawn rate yang telah di tetapkan hasil failuresnya tetap 100% dan kami telah mencoba untuk memakai arsitektur yang berbeda tetapi tetap saja hasil failuresnya berada di 100%. Jadi kami belum berhasil memenuhi sesuai permintaan soal pada pengujian locust, tetapi kami berhasil menguji Endpoint. 
+
+## Link Video
+[VIDEO DEMO](https://www.youtube.com/live/6M_ftvrB1NI?si=jG_ybj8ZuVj42xWF)
+
