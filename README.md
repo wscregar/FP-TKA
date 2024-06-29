@@ -20,7 +20,7 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 ![image](https://github.com/wscregar/FP-TKA/assets/145766477/d7d92f0c-474d-49db-adfd-5188bb7eec4a)
 
 
-## Implementasi Arsitektur Cloud
+# Implementasi Arsitektur Cloud
 
 A. Setup
 * Load Balancer
@@ -28,26 +28,6 @@ A. Setup
 * Worker 1
 
 * Worker 2
-
-## Langkah-langkah awal
-
-Membuat 2 Droplets, 1 untuk application dan 1 untuk Back-end di Digital Ocean
-
-Membuat Load-Balancer dan disambungkan ke 1 application Droplets
-
-Terakhir, membuat Database MongoDB
-
-### Konfigurasi
-
-Untuk droplet application:
-
-- `sudo apt-get install apache2`
-
-- masukkan `index.html` beserta `styles.css` di Resources yang diberikan
-
-- Gunakan command `systemctl restart apache2` untuk restart service apache2
-
-- Akses web menggunakan IP yang terbuat didroplets
 
 # Hasil dari Implementasi
 ### Hasil Endpoin API 
@@ -58,3 +38,8 @@ Untuk droplet application:
 ![Gambar WhatsApp 2024-06-21 pukul 21 08 14_b9d86110](https://github.com/wscregar/FP-TKA/assets/145766477/f6e5f60c-aa77-4a8b-9834-6bdc9b0a5f60)
 
 ![Gambar WhatsApp 2024-06-21 pukul 21 08 44_ee4f62ab](https://github.com/wscregar/FP-TKA/assets/145766477/270c4c8e-d84f-4e78-94e6-4e6ba737e123)
+
+# Kesimpulan 
+
+# Saran
+
