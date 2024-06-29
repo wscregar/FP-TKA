@@ -198,6 +198,20 @@ sudo systemctl start mongod
 ![Screenshot_2024-06-29_193144 1](https://github.com/wscregar/FP-TKA/assets/145766477/5aa72273-3397-43bb-a991-30a8fa58cffd)
 
 ### Hasil Locust 
+1. Jumlah Request per seconds (RPS) maksimum yang dapat ditangani oleh server dengan durasi waktu load testing 60 detik
+   ![Screenshot_2024-06-29_224858 1](https://github.com/wscregar/FP-TKA/assets/145766477/1091e3cf-1cd3-4bf8-9503-427cc78e3006)
+
+2. Jumlah peak concurrency maksimum yang dapat ditangani oleh server dengan spawn rate 50 dan durasi waktu load testing 60 detik
+   ![Screenshot_2024-06-29_224858 1](https://github.com/wscregar/FP-TKA/assets/145766477/d017e106-d421-4992-a191-741e4beee0c9)
+
+3. Jumlah peak concurrency maksimum yang dapat ditangani oleh server dengan spawn rate 100 dan durasi waktu load testing 60 detik
+   ![Screenshot_2024-06-29_230930 1](https://github.com/wscregar/FP-TKA/assets/145766477/5b4386a6-655e-42bc-9c83-81fdca6afa12)
+
+4. Jumlah peak concurrency maksimum yang dapat ditangani oleh server dengan spawn rate 200 dan durasi waktu load testing 60 detik
+   ![Screenshot_2024-06-29_231245 1](https://github.com/wscregar/FP-TKA/assets/145766477/30c62469-e2b8-4adf-862e-15f53708efe1)
+
+5. Jumlah peak concurrency maksimum yang dapat ditangani oleh server dengan spawn rate 500 dan durasi waktu load testing 60 detik
+   ![Screenshot_2024-06-29_231459 1](https://github.com/wscregar/FP-TKA/assets/145766477/a3183a61-a904-49f4-8bf5-2d1c248a1ce4)
 
 # Kesimpulan 
-
+Dari semua pengujian yang telah kami uji coba dengan spawn rate yang telah di tetapkan hasil failuresnya tetap 100% dan kami telah mencoba untuk memakai arsitektur yang berbeda tetapi tetap saja hasil failuresnya berada di 100%. Jadi kami belum berhasil memenuhi permintaan soal 
