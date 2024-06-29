@@ -23,9 +23,111 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 # Implementasi Arsitektur Cloud
 
-A. Setup
+## Konfigurasi
+
 * Load Balancer
   ![image](https://github.com/wscregar/FP-TKA/assets/163504787/6f64c0cb-8c14-495a-b1a9-dd5779fda8de)
+
+
+1. Update package list and install nginx, git, and python3-venv `sudo apt update` dan `sudo apt install -y nginx git python3-venv`
+   
+2. Set ulimit `ulimit -n 100000`
+
+3. Mengambil Resource `git clone https://github.com/fuaddary/fp-tka.git`
+
+4. Memindahkan default nginx configuration `sudo unlink /etc/nginx/sites-available/default`
+
+5. Membuat konfigurasi file nginx baru untuk app `cat <<EOL | sudo tee /etc/nginx/sites-available/app`
+```
+ upstream backend_servers {
+     # VM1
+     server 68.183.231.98:5000;
+     # VM2
+     server 165.22.241.204:5000;
+ }
+
+ server {
+     listen 80;
+     server_name 159.223.64.29;  # Ganti dengan IP LB
+
+     location / {
+         # Aktifkan penggunaan cache
+         proxy_cache my_cache;
+         proxy_cache_valid 200 302 10m;
+         proxy_cache_valid 404 1m;
+
+         # Konfigurasi caching tambahan
+         proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+         proxy_cache_lock on;
+         proxy_cache_lock_timeout 5s;
+
+         # Pengaturan proxy_pass dan header lainnya
+         proxy_pass http://backend_servers;
+         proxy_set_header Host \$host;
+         proxy_set_header X-Real-IP \$remote_addr;
+         proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+         proxy_set_header X-Forwarded-Proto \$scheme;
+
+         # Header tambahan untuk mengidentifikasi status cache
+         add_header X-Cached \$upstream_cache_status;
+     }
+ }
+ EOL
+```
+
+6. Mengaktifkan konfig baru `sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled`
+
+7. Mengedit nginx.conf file `cat <<EOL | sudo tee /etc/nginx/nginx.conf`
+```
+ user www-data;
+ worker_processes 2;
+ error_log /var/log/nginx/error.log warn;
+ pid /var/run/nginx.pid;
+ worker_rlimit_nofile 100000;
+
+ events {
+     worker_connections 4096;
+ }
+
+ http {
+     include /etc/nginx/mime.types;
+     default_type application/octet-stream;
+
+     log_format main '\$remote_addr - \$remote_user [\$time_local] '
+                     '"\$request" \$status \$body_bytes_sent '
+                     '"\$http_referer" "\$http_user_agent" '
+                     '"\$http_x_forwarded_for"';
+
+     access_log /var/log/nginx/access.log main;
+
+     sendfile on;
+     tcp_nopush on;
+     tcp_nodelay on;
+     keepalive_timeout 65;
+     types_hash_max_size 2048;
+
+     # Konfigurasi cache
+     proxy_cache_path /var/cache/nginx levels=1:2 keys_zone=my_cache:10m max_size=10g inactive=60m;
+     proxy_temp_path /var/cache/nginx/temp;
+     proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+     proxy_cache_lock on;
+     proxy_cache_lock_timeout 5s;
+
+     include /etc/nginx/conf.d/*.conf;
+     include /etc/nginx/sites-enabled/*;
+ }
+ EOL
+```
+
+8. Restart nginx `sudo systemctl restart nginx`
+
+10. masuk ke dalam direktori test `cd fp-tka/Resources/Test`
+
+11. menjalankan locustfile.py dengan locust dengan python virtual environment
+ `python3 -m venv venv`
+ `source venv/bin/activate`
+ `pip install locust`
+ `locust -f locustfile.py`  
 
 
 * Worker 1
@@ -33,11 +135,13 @@ A. Setup
 
 * Worker 2
   ![image](https://github.com/wscregar/FP-TKA/assets/163504787/9d12bb01-d4c6-440a-b461-3b0b67bc5f2d)
+  
 
 #### Set up Worker 1 dan 2 (sebagai BackEnd dan FrontEnd)
 
-- Mengambil Resource `git clone https://github.com/fuaddary/fp-tka.git`
-- Masuk ke dalam direktori BE `cd fp-tka/Resources/BE`
+1. Mengambil Resource `git clone https://github.com/fuaddary/fp-tka.git`
+  
+2. Masuk ke dalam direktori BE `cd fp-tka/Resources/BE`
 - Set up database
 ```
 sudo apt-get install gnupg curl
@@ -60,7 +164,7 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 sudo systemctl start mongod
 ```
 
-- Setup Python environment dan istall dependenciesnya
+3. Setup Python environment dan istall dependenciesnya
 ```
  sudo apt install -y python3-venv
  python3 -m venv venv
@@ -68,8 +172,9 @@ sudo systemctl start mongod
  pip install flask flask-cors textblob pymongo
 ```
 
-- Konfigurasikan index.html beserta styles.css
--  Nyalakan menggunakan command `source venv/bin/activate` dan `gunicorn -b 0.0.0.0:5000 -w 5 -k gevent --timeout 60 --graceful-timeout 60 sentiment_analysis:app`
+4. Konfigurasikan index.html beserta styles.css pada `/var/www/html`
+  
+5. Nyalakan menggunakan command `source venv/bin/activate` dan `gunicorn -b 0.0.0.0:5000 -w 5 -k gevent --timeout 60 --graceful-timeout 60 sentiment_analysis:app`
 
 
 # Hasil dari Implementasi
