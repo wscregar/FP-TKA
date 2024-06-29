@@ -25,12 +25,14 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 A. Setup
 * Load Balancer
+  ![image](https://github.com/wscregar/FP-TKA/assets/163504787/6f64c0cb-8c14-495a-b1a9-dd5779fda8de)
+
 
 * Worker 1
-* Database 1
+  ![image](https://github.com/wscregar/FP-TKA/assets/163504787/b36d7b6d-37e8-4725-92aa-5faa0c290640)
 
 * Worker 2
-* Database 2
+  ![image](https://github.com/wscregar/FP-TKA/assets/163504787/9d12bb01-d4c6-440a-b461-3b0b67bc5f2d)
 
 # Hasil dari Implementasi
 ### Hasil Endpoin POST
