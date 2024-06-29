@@ -34,6 +34,44 @@ A. Setup
 * Worker 2
   ![image](https://github.com/wscregar/FP-TKA/assets/163504787/9d12bb01-d4c6-440a-b461-3b0b67bc5f2d)
 
+#### Set up Worker 1 dan 2 (sebagai BackEnd dan FrontEnd)
+
+- Mengambil Resource `git clone https://github.com/fuaddary/fp-tka.git`
+- Masuk ke dalam direktori BE `cd fp-tka/Resources/BE`
+- Set up database
+```
+sudo apt-get install gnupg curl
+
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \ sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \ --dearmor
+
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org
+
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-database hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-mongosh hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+sudo systemctl start mongod
+```
+
+- Setup Python environment dan istall dependenciesnya
+```
+ sudo apt install -y python3-venv
+ python3 -m venv venv
+ source venv/bin/activate
+ pip install flask flask-cors textblob pymongo
+```
+
+- Konfigurasikan index.html beserta styles.css
+-  Nyalakan menggunakan command `source venv/bin/activate` dan `gunicorn -b 0.0.0.0:5000 -w 5 -k gevent --timeout 60 --graceful-timeout 60 sentiment_analysis:app`
+
+
 # Hasil dari Implementasi
 ### Hasil Endpoin POST
 
