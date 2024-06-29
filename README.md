@@ -17,7 +17,8 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 * Estimasi Harga
 
-![image](https://github.com/wscregar/FP-TKA/assets/145766477/d7d92f0c-474d-49db-adfd-5188bb7eec4a)
+![image](https://github.com/wscregar/FP-TKA/assets/145766477/c1459c3d-5f26-41c1-8143-6582d958502d)
+
 
 
 # Implementasi Arsitektur Cloud
