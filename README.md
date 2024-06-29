@@ -124,10 +124,14 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 10. masuk ke dalam direktori test `cd fp-tka/Resources/Test`
 
 11. menjalankan locustfile.py dengan locust dengan python virtual environment
- `python3 -m venv venv`
- `source venv/bin/activate`
- `pip install locust`
- `locust -f locustfile.py`  
+
+`python3 -m venv venv`
+ 
+`source venv/bin/activate`
+ 
+`pip install locust`
+ 
+`locust -f locustfile.py`  
 
 
 * Worker 1
