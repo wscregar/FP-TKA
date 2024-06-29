@@ -30,16 +30,20 @@ A. Setup
 * Worker 2
 
 # Hasil dari Implementasi
-### Hasil Endpoin API 
+### Hasil Endpoin POST
 
-![Gambar WhatsApp 2024-06-21 pukul 21 09 58_8925ba1f](https://github.com/wscregar/FP-TKA/assets/145766477/542cc8d5-8281-4f49-a8b1-bb29a5861bab)
+![Screenshot_2024-06-29_193450 1](https://github.com/wscregar/FP-TKA/assets/145766477/c3ec641f-9194-4bf6-acf4-127d1bb86cc3)
+
+![Gambar WhatsApp 2024-06-29 pukul 21 12 19_e7374095](https://github.com/wscregar/FP-TKA/assets/145766477/145ffb55-c9aa-4e69-b80d-dceaf20b1ea5)
+
+
+### Hasil Sentiment Analysis
+
+![Screenshot_2024-06-29_193227 1](https://github.com/wscregar/FP-TKA/assets/145766477/6b91894e-6d45-46cf-880f-6452f128bdf3)
+
+![Screenshot_2024-06-29_193144 1](https://github.com/wscregar/FP-TKA/assets/145766477/5aa72273-3397-43bb-a991-30a8fa58cffd)
 
 ### Hasil Locust 
-![Gambar WhatsApp 2024-06-21 pukul 21 08 14_b9d86110](https://github.com/wscregar/FP-TKA/assets/145766477/f6e5f60c-aa77-4a8b-9834-6bdc9b0a5f60)
-
-![Gambar WhatsApp 2024-06-21 pukul 21 08 44_ee4f62ab](https://github.com/wscregar/FP-TKA/assets/145766477/270c4c8e-d84f-4e78-94e6-4e6ba737e123)
 
 # Kesimpulan 
-
-# Saran
 
