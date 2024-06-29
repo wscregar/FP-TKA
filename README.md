@@ -27,8 +27,10 @@ A. Setup
 * Load Balancer
 
 * Worker 1
+* Database 1
 
 * Worker 2
+* Database 2
 
 # Hasil dari Implementasi
 ### Hasil Endpoin POST
